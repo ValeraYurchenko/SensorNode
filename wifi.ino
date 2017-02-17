@@ -20,8 +20,8 @@ void wifiConnect(){
     statusLine = "WiFi not found";
     printStatusLine();
   } else {
-    statusLine = "Connecting..";
-    printStatusLine();
+    //statusLine = "Connecting..";
+    //printStatusLine();
 
     /*for (int i = 0; i < n; ++i) {
       int index = findInArray(wifi_ids, WiFi.SSID(i));
@@ -64,6 +64,9 @@ void wifiConnect(){
 }
 
 void wifiConnect(char* ssid, char* pass) {
+  statusLine = String("Connecting: ") + ssid;
+  printStatusLine();
+    
   Serial.print("Connect to ");
   Serial.print(ssid);
   Serial.println(pass);
@@ -76,6 +79,11 @@ void wifiConnect(char* ssid, char* pass) {
   int timer = 0;
   while (WiFi.status() != WL_CONNECTED && timer < 5000) {
     delay(500);
+    timer += 500;
+
+    if (WiFi.status() == WL_NO_SSID_AVAIL) {
+      break;
+    }
   }
 }
 

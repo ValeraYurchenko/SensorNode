@@ -1,6 +1,7 @@
 char degree_symbol = char(503);
 void initDisplay() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  delay(50);
   display.clearDisplay();
   drawStatic();
   printStatusLine();

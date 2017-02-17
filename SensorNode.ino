@@ -24,6 +24,8 @@ String statusLine = "";
 
 void setup() {
   Serial.begin(9600);
+  dht.begin();
+  delay(100);
   initDisplay();
   updateSesors();
   checkWifiConnection();
