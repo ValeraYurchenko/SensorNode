@@ -1,8 +1,7 @@
-void updateSesors() {
-  Serial.println("updateSesors run");
-  
-  int h = (int)dht.readHumidity();
-  int t = (int)dht.readTemperature();
+void updateSensors() {
+
+  int h = 0;//(int)dht.readHumidity();
+  int t = 0;//ooo(int)dht.readTemperature();
 
   Serial.println("updateSesors run: t=" + String(t) + ", h=" + String(h));
 

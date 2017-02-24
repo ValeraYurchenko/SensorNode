@@ -21,12 +21,12 @@ void printSensorDataToDisplay() {
 }
 
 void drawStatic() {
-  display.fillRect(0, 0, 128, 10, WHITE);     //       ||||||||||||||||||||
-  display.drawLine(0, 43, 128, 43, WHITE);   //       |        |         |
+  display.fillRect(0, 0, 128, 10, WHITE);   //       ||||||||||||||||||||
+  display.drawLine(0, 43, 128, 43, WHITE);  //       |        |         |
   display.drawLine(66, 10, 66, 43, WHITE);  //       |  25 C  |   40%   |
-                                             //       |tempera_|_Humid___|
-  display.setTextSize(1);                    //       |-------------     |
-  display.setCursor(0,33);                   //       |___Ligting 80%____|
+                                            //       |tempera_|_Humid___|
+  display.setTextSize(1);                   //       |-------------     |
+  display.setCursor(0,33);                  //       |___Ligting 80%____|
   display.setTextColor(WHITE, BLACK);
   display.print("Temperature");
   display.setCursor(70,33);
